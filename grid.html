@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #grid {
+        border:5px solid pink;
+        display:grid;
+        grid-template-columns:150px 1fr;
+        /* fr은 화면 전체를 사용하는 단위로
+        150px 1fr은 150px-NAVIGATION(div)가 사용하고
+        나머지 부분은 ARTICLE(div)이 차지한다.
+        ex) 2fr 1fr로 하면 전체를 3으로 나눴을때
+        2의 비율, 1의 비율만큼 차지한다.*/
+      }
+      div{
+        border:5px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div(division)는 디자인을 목적으로 의미가 존재하지 않는 태그 block level element -->
+    <!-- span 또한 div와 같은 목적의 태그이지만 inline element  -->
+    <div id="grid">
+      <div>NAVIGATION</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>
+  </body>
+</html>
